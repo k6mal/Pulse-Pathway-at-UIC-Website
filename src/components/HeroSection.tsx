@@ -20,14 +20,11 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in leading-tight">
           <span className="text-foreground">Direct one on one mentorship with</span>
           <br />
-          <span 
-            className="inline-block relative overflow-hidden"
-            style={{ height: "1.2em", minWidth: "280px" }}
-          >
+          <span className="relative inline-flex justify-center h-[1.2em] w-full">
             {roles.map((role, index) => (
               <span
                 key={role}
-                className={`absolute left-0 right-0 text-forest transition-all duration-500 ease-in-out ${
+                className={`absolute inset-x-0 text-center text-forest transition-all duration-500 ease-in-out ${
                   index === currentIndex
                     ? "translate-y-0 opacity-100"
                     : index === (currentIndex - 1 + roles.length) % roles.length
