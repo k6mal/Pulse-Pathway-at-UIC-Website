@@ -1,20 +1,16 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-// 1. Updated text to "PA Students"
 const roles = ["Medical Students", "PA Students"];
 
 const HeroSection = () => {
-  // 2. We double the array to create a buffer. 
-  // This ensures there is always a distinct "previous" (top) and "next" (bottom) item,
-  // preventing the overlap glitch where they crash into each other.
+  // We keep the doubled array technique for smooth transitions
   const displayRoles = [...roles, ...roles]; 
   
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Loop through the length of the doubled array
       setCurrentIndex((prev) => (prev + 1) % displayRoles.length);
     }, 3000);
     return () => clearInterval(interval);
@@ -27,18 +23,18 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in leading-tight">
           <span className="text-foreground">Direct one on one mentorship with</span>
           <br />
-          {/* Container for the animated text */}
+          {/* Container: Changed to inline-block to better handle horizontal width if needed, 
+              but inline-flex works well with the centering. */}
           <span className="relative inline-flex justify-center h-[1.2em] w-full overflow-hidden">
             {displayRoles.map((role, index) => (
               <span
-                // Create a unique key using index since items are duplicated
                 key={`${role}-${index}`} 
                 className={`absolute inset-x-0 text-center text-forest transition-all duration-500 ease-in-out ${
                   index === currentIndex
-                    ? "translate-y-0 opacity-100" // Active: Center
+                    ? "translate-x-0 opacity-100"   // Active: Center
                     : index === (currentIndex - 1 + displayRoles.length) % displayRoles.length
-                    ? "-translate-y-8 opacity-0"  // Previous: Exit Up (changed from -6 to -8 for clearance)
-                    : "translate-y-8 opacity-0"   // Next/Others: Enter from Bottom
+                    ? "translate-x-12 opacity-0"    // Previous: Exit to RIGHT (+X)
+                    : "-translate-x-12 opacity-0"   // Next: Enter from LEFT (-X)
                 }`}
               >
                 {role}
