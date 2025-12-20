@@ -35,10 +35,10 @@ const HeroSection = () => {
                     shouldAnimate ? "transition-all duration-500" : "transition-none duration-0"
                   } ${
                     isCurrent
-                      ? "translate-y-0 opacity-100"
+                      ? "translate-x-0 opacity-100"
                       : isPrev
-                      ? "-translate-y-6 opacity-0"
-                      : "translate-y-6 opacity-0"
+                      ? "-translate-x-12 opacity-0"
+                      : "translate-x-12 opacity-0"
                   }`}
                 >
                   {role}
