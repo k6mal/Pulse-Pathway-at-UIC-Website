@@ -112,3 +112,25 @@
     animation-delay: 300ms;
   }
 }
+
+@keyframes text-slide {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  25%, 45% {
+    transform: translateY(-100%);
+  }
+  50%, 70% {
+    transform: translateY(-200%);
+  }
+  75%, 95% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-text-slide {
+  animation: text-slide 8s ease-in-out infinite;
+}

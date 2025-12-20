@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 
+const roles = ["Medical Students", "Physician Assistant Students"];
+
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background px-6">
@@ -14,9 +16,21 @@ const HeroSection = () => {
           </span>
         </h1>
 
-        {/* Subheadline - Serif font */}
-        <p className="mt-8 text-xl md:text-2xl lg:text-3xl font-serif text-muted-foreground italic opacity-0 animate-fade-in animate-delay-100">
-          Direct one on one mentorship with Medical Students
+        {/* Subheadline - Futura/Jost font with animated role */}
+        <p className="mt-8 text-xl md:text-2xl lg:text-3xl font-display text-muted-foreground opacity-0 animate-fade-in animate-delay-100">
+          <span>Direct one on one mentorship with </span>
+          <span className="inline-block h-[1.2em] overflow-hidden align-bottom">
+            <span className="flex flex-col animate-text-slide">
+              {[...roles, ...roles].map((role, index) => (
+                <span 
+                  key={index} 
+                  className="h-[1.2em] flex items-center text-foreground font-medium"
+                >
+                  {role}
+                </span>
+              ))}
+            </span>
+          </span>
         </p>
 
         {/* CTA Buttons */}
