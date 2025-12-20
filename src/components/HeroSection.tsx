@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 const roles = ["Medical Students", "PA Students"];
 
 const HeroSection = () => {
-  // We keep the doubled array technique for smooth transitions
-  const displayRoles = [...roles, ...roles]; 
-  
+  const displayRoles = [...roles, ...roles];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -23,23 +21,30 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in leading-tight">
           <span className="text-foreground">Direct one on one mentorship with</span>
           <br />
-          {/* Container: Changed to inline-block to better handle horizontal width if needed, 
-              but inline-flex works well with the centering. */}
+          {/* Container needs overflow-hidden to "mask" the sliding text */}
           <span className="relative inline-flex justify-center h-[1.2em] w-full overflow-hidden">
-            {displayRoles.map((role, index) => (
-              <span
-                key={`${role}-${index}`} 
-                className={`absolute inset-x-0 text-center text-forest transition-all duration-500 ease-in-out ${
-                  index === currentIndex
-                    ? "translate-x-0 opacity-100"   // Active: Center
-                    : index === (currentIndex - 1 + displayRoles.length) % displayRoles.length
-                    ? "translate-x-12 opacity-0"    // Previous: Exit to RIGHT (+X)
-                    : "-translate-x-12 opacity-0"   // Next: Enter from LEFT (-X)
-                }`}
-              >
-                {role}
-              </span>
-            ))}
+            {displayRoles.map((role, index) => {
+              const isCurrent = index === currentIndex;
+              const isPrev = index === (currentIndex - 1 + displayRoles.length) % displayRoles.length;
+              const shouldAnimate = isCurrent || isPrev;
+
+              return (
+                <span
+                  key={`${role}-${index}`}
+                  className={`absolute inset-x-0 text-center text-forest ease-in-out ${
+                    shouldAnimate ? "transition-all duration-500" : "transition-none duration-0"
+                  } ${
+                    isCurrent
+                      ? "translate-y-0 opacity-100"
+                      : isPrev
+                      ? "-translate-y-6 opacity-0"
+                      : "translate-y-6 opacity-0"
+                  }`}
+                >
+                  {role}
+                </span>
+              );
+            })}
           </span>
         </h1>
 
