@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/pulse-pathway-logo.png";
 
 const Navbar = () => {
   return (
@@ -8,7 +7,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Left side - Brand and nav links */}
           <div className="flex items-center gap-8">
-            <img src={logo} alt="Pulse Pathway at UIC" className="h-10" />
+            <span className="text-lg font-bold tracking-tight text-foreground">
+              Pulse Pathway at UIC
+            </span>
             <div className="hidden md:flex items-center gap-6">
               <a 
                 href="#about" 
