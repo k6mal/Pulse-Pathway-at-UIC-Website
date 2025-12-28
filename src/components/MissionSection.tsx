@@ -13,7 +13,7 @@ const MissionSection = () => {
         <div className="bg-[hsl(170,50%,25%,0.1)] rounded-2xl p-8 md:p-10 lg:p-12">
           <div className="space-y-6 text-[hsl(170,50%,25%)] text-base md:text-lg leading-relaxed">
             <p>
-              Pulse Pathways is committed to supporting pre-medical students by
+              Pulse Pathway is committed to supporting pre-medical students by
               providing structured, one-on-one mentorship with graduate and
               medical students.
             </p>
@@ -29,7 +29,7 @@ const MissionSection = () => {
               By leveraging our close proximity to the Rush campus, we aim to
               enhance access to mentorship, clinical insight, and professional
               development, maximizing opportunities and benefits for our
-              members. Pulse Pathways emphasizes community, mentorship, and
+              members. Pulse Pathway emphasizes community, mentorship, and
               continuity, fostering meaningful, long-term mentor–mentee
               connections that equip aspiring physicians with the insight,
               support, and confidence needed to progress through each stage of
