@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import logo from "@/assets/pulse-pathway-logo.png";
 
 const roles = ["Medical Students", "PA Students"];
 
@@ -30,8 +31,11 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-background px-6 relative">
       <div className="text-center max-w-5xl mx-auto">
+        {/* Logo */}
+        <img src={logo} alt="Pulse Pathway at UIC" className="h-[7.5rem] mx-auto mb-8 opacity-0 animate-fade-in" />
+        
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in animate-delay-100 leading-tight">
           <span className="text-foreground">direct long-term one on one mentorship with</span>
           <br />
           {/* Container needs overflow-hidden to "mask" the sliding text */}
