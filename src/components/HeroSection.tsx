@@ -32,7 +32,7 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center bg-background px-6 relative">
       <div className="text-center max-w-5xl mx-auto">
         {/* Logo */}
-        <img src={logo} alt="Pulse Pathway at UIC" className="h-[7.5rem] mx-auto mb-8 opacity-0 animate-fade-in" />
+        <img src={logo} alt="Pulse Pathway at UIC" className="h-[18.75rem] mx-auto mb-8 opacity-0 animate-fade-in" />
         
         {/* Main Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in animate-delay-100 leading-tight">
