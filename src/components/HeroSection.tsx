@@ -32,10 +32,10 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center bg-background px-6 relative">
       <div className="text-center max-w-5xl mx-auto">
         {/* Logo */}
-        <img src={logo} alt="Pulse Pathway at UIC" className="h-[18.75rem] mx-auto mb-4 opacity-0 animate-fade-in" />
+        <img src={logo} alt="Pulse Pathway at UIC" className="h-[18.75rem] mx-auto mb-4" />
         
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight opacity-0 animate-fade-in animate-delay-100 leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
           <span className="text-foreground">direct long-term one on one mentorship with</span>
           <br />
           {/* Container needs overflow-hidden to "mask" the sliding text */}
@@ -66,12 +66,12 @@ const HeroSection = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="mt-8 text-xl md:text-2xl font-display text-muted-foreground opacity-0 animate-fade-in animate-delay-100">
+        <p className="mt-8 text-xl md:text-2xl font-display text-muted-foreground">
           Mentorship. Matters.
         </p>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in animate-delay-200">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button variant="default" size="lg">
             Join Now
           </Button>
