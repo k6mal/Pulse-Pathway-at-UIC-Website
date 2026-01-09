@@ -45,7 +45,7 @@ const MissionSection = () => {
 
           {/* Right Column */}
           <div className="bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300">
-            <img src={starBadge} alt="Star badge" className="w-10 h-10 mb-4" />
+            <img src={starBadge} alt="Star badge" className="w-10 h-10 mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
             <div className="h-1 w-12 bg-mint/60 rounded-full mb-6" />
             <p className="text-forest/80 text-base lg:text-lg leading-relaxed">
               By leveraging our close proximity to the Rush campus, we aim to
