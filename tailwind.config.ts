@@ -83,9 +83,9 @@ export default {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "marquee": {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+        "ekg-exit": {
+          from: { opacity: "1", transform: "translateY(0)" },
+          to: { opacity: "0", transform: "translateY(-32px)" },
         },
         "content-reveal": {
           from: { opacity: "0", transform: "translateY(30px)" },
@@ -96,7 +96,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
-        "marquee": "marquee 12s linear infinite",
+        "ekg-exit": "ekg-exit 0.6s ease-in forwards",
         "content-reveal": "content-reveal 0.8s ease-out forwards",
       },
     },
