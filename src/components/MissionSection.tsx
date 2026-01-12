@@ -1,33 +1,9 @@
-import { useState, useEffect, useRef } from "react";
 import { Users } from "lucide-react";
 import starBadge from "@/assets/star-badge.png";
 
 const MissionSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
-
   return (
-    <section 
-      ref={sectionRef}
-      className="min-h-screen py-24 px-6 md:px-12 lg:px-20 flex items-center bg-background"
-    >
+    <section className="min-h-screen py-24 px-6 md:px-12 lg:px-20 flex items-center bg-background">
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -38,13 +14,9 @@ const MissionSection = () => {
         </div>
 
         {/* Three Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-stretch relative">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-stretch">
           {/* Left Column */}
-          <div 
-            className={`bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
-              isVisible ? "animate-slide-out-left" : "opacity-0 translate-x-1/2"
-            }`}
-          >
+          <div className="bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300">
             <Users 
               className="w-10 h-10 mb-4 text-forest/70" 
               strokeWidth={1.5}
@@ -61,10 +33,8 @@ const MissionSection = () => {
           </div>
 
           {/* Middle Column - Emphasized */}
-          <div className="bg-forest rounded-2xl p-8 lg:p-12 shadow-xl transform lg:scale-105 lg:-my-4 z-10">
-            <h3 className="font-display font-bold text-2xl md:text-3xl tracking-wide text-[hsl(142,76%,12%)] mb-6" style={{ WebkitTextStroke: '0.5px hsl(47, 65%, 84%)' }}>
-              OUR CORE
-            </h3>
+          <div className="bg-forest rounded-2xl p-8 lg:p-12 shadow-xl transform lg:scale-105 lg:-my-4">
+            <div className="h-1 w-16 bg-mint rounded-full mb-6" />
             <p className="text-white text-lg lg:text-xl leading-relaxed font-medium">
               Pulse Pathway is committed to supporting pre-medical students by
               providing structured, one-on-one mentorship with graduate and
@@ -79,17 +49,8 @@ const MissionSection = () => {
           </div>
 
           {/* Right Column */}
-          <div 
-            className={`bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 relative ${
-              isVisible ? "animate-slide-out-right" : "opacity-0 -translate-x-1/2"
-            }`}
-          >
-            <img 
-              src={starBadge} 
-              alt="Star badge" 
-              className="w-10 h-10 absolute top-8 right-8 lg:top-10 lg:right-10" 
-              style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} 
-            />
+          <div className="bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300">
+            <img src={starBadge} alt="Star badge" className="w-10 h-10 mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
             <div className="h-1 w-12 bg-mint/60 rounded-full mb-6" />
             <p className="text-forest/80 text-base lg:text-lg leading-relaxed">
               By leveraging our close proximity to the Rush campus, we aim to

@@ -91,14 +91,6 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "slide-out-left": {
-          from: { opacity: "0", transform: "translateX(50%)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
-        "slide-out-right": {
-          from: { opacity: "0", transform: "translateX(-50%)" },
-          to: { opacity: "1", transform: "translateX(0)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
