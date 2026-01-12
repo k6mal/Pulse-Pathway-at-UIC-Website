@@ -98,8 +98,6 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "ekg-exit": "ekg-exit 0.6s ease-in forwards",
         "content-reveal": "content-reveal 0.8s ease-out forwards",
-        "slide-out-left": "slide-out-left 0.7s ease-out forwards",
-        "slide-out-right": "slide-out-right 0.7s ease-out forwards",
       },
     },
   },
