@@ -156,6 +156,26 @@ export default {
             opacity: "0"
           }
         },
+        "slide-out-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(50%)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        },
+        "slide-out-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translateX(-50%)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -168,6 +188,8 @@ export default {
         "ekg-sweep": "ekg-sweep 2s linear infinite",
         "draw-mask": "draw-mask 2s linear infinite",
         "line-wipe": "line-wipe 0.8s ease-in-out 2s forwards",
+        "slide-out-left": "slide-out-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
+        "slide-out-right": "slide-out-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
       },
     },
   },
