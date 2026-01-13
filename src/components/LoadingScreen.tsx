@@ -1,101 +1,85 @@
 import { useState, useEffect } from "react";
+import pulseLogo from "@/assets/Pulse.png";
 
 interface LoadingScreenProps {
   onLoadingComplete: () => void;
 }
 
 const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
-  const [phase, setPhase] = useState<"pulse" | "exit" | "done">("pulse");
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Run 2 pulse cycles (~2.4s), then exit
-    const exitTimer = setTimeout(() => {
-      setPhase("exit");
-    }, 2400);
+    // Simulate loading time of 2 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+      // Wait for fade-out animation to complete
+      setTimeout(onLoadingComplete, 500);
+    }, 2000);
 
-    // Complete after exit animation
-    const completeTimer = setTimeout(() => {
-      setPhase("done");
-      onLoadingComplete();
-    }, 3000);
-
-    return () => {
-      clearTimeout(exitTimer);
-      clearTimeout(completeTimer);
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
-
-  if (phase === "done") return null;
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-all duration-500 ease-in ${
-        phase === "exit" ? "opacity-0 -translate-y-8" : "opacity-100 translate-y-0"
+      className={`fixed inset-0 z-[100] bg-white flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="w-64 md:w-80">
+      {/* EKG Animation Container */}
+      <div className="relative w-full h-80 flex items-center justify-center px-8">
+        {/* EKG Line */}
         <svg
-          viewBox="0 0 400 120"
-          className="w-full h-auto"
+          className="w-full h-full"
+          viewBox="0 0 1000 300"
+          xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMidYMid meet"
         >
-          {/* EKG Path - traced like the uploaded logo */}
-          <path
-            d="M 10 70 
-               L 60 70 
-               Q 70 70 75 60 
-               Q 80 50 85 70 
-               Q 90 90 95 70 
-               Q 100 50 105 60 
-               L 110 70 
-               L 140 70 
-               L 155 70 
-               L 170 70 
-               L 180 20 
-               L 195 100 
-               L 210 55 
-               L 225 70 
-               Q 235 75 245 72 
-               L 260 70 
-               L 390 70"
-            fill="none"
-            stroke="hsl(142, 76%, 22%)"
-            strokeWidth="8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="ekg-line"
+          <defs>
+            {/* Blur filter for fuzzy edges */}
+            <filter id="blur">
+              <feGaussianBlur stdDeviation="8" />
+            </filter>
+
+            {/* Gradient for soft edges - sweep box */}
+            <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="black" stopOpacity="0" />
+              <stop offset="30%" stopColor="black" stopOpacity="1" />
+              <stop offset="70%" stopColor="black" stopOpacity="1" />
+              <stop offset="100%" stopColor="black" stopOpacity="0" />
+            </linearGradient>
+
+            {/* Gradient for reveal edge */}
+            <linearGradient id="revealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="white" stopOpacity="1" />
+              <stop offset="98%" stopColor="white" stopOpacity="1" />
+              <stop offset="100%" stopColor="white" stopOpacity="0" />
+            </linearGradient>
+
+            <mask id="sweepMask">
+              <g className="animate-ekg-sweep">
+                <rect
+                  x="0"
+                  y="0"
+                  width="1200"
+                  height="300"
+                  fill="url(#revealGradient)"
+                />
+              </g>
+            </mask>
+          </defs>
+
+          {/* Pulse logo image with mask */}
+          <image
+            href={pulseLogo}
+            x="0"
+            y="75"
+            width="1000"
+            height="150"
+            preserveAspectRatio="xMidYMid meet"
+            mask="url(#sweepMask)"
           />
         </svg>
       </div>
-
-      <style>{`
-        .ekg-line {
-          stroke-dasharray: 800;
-          stroke-dashoffset: 800;
-          animation: ekg-draw 1.2s ease-in-out forwards, ekg-pulse 1.2s ease-in-out 1.2s forwards;
-        }
-        
-        @keyframes ekg-draw {
-          0% {
-            stroke-dashoffset: 800;
-          }
-          100% {
-            stroke-dashoffset: 0;
-          }
-        }
-        
-        @keyframes ekg-pulse {
-          0% {
-            stroke-dashoffset: 0;
-          }
-          50% {
-            stroke-dashoffset: -400;
-          }
-          100% {
-            stroke-dashoffset: 0;
-          }
-        }
-      `}</style>
     </div>
   );
 };

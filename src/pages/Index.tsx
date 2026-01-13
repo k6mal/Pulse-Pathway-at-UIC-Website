@@ -17,7 +17,7 @@ const Index = () => {
   return (
     <>
       {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-      <main className="min-h-screen bg-background">
+      <main className={`min-h-screen bg-background ${isLoading ? 'hidden' : ''}`}>
         <div className={`transition-opacity duration-500 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
           <div className={showContent ? 'animate-content-reveal' : ''} style={{ animationDelay: '0ms' }}>
             <Navbar />

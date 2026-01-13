@@ -91,6 +91,71 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        "pulse-logo": {
+          "0%, 100%": {
+            opacity: "0.85",
+            transform: "scale(1)"
+          },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1.08)"
+          },
+        },
+        "ekg-draw": {
+          "0%": {
+            strokeDashoffset: "2000",
+            opacity: "0"
+          },
+          "2%": {
+            opacity: "1"
+          },
+          "40%": {
+            strokeDashoffset: "0",
+            opacity: "1"
+          },
+          "50%, 100%": {
+            strokeDashoffset: "0",
+            opacity: "1"
+          }
+        },
+        "ekg-sweep": {
+          "0%": {
+            transform: "translateX(-1200px)"
+          },
+          "100%": {
+            transform: "translateX(1000px)"
+          }
+        },
+        "line-wipe": {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: "0"
+          },
+          "5%": {
+            opacity: "0.8"
+          },
+          "95%": {
+            opacity: "0.8"
+          },
+          "100%": {
+            transform: "translateY(100vh)",
+            opacity: "0"
+          }
+        },
+        "draw-mask": {
+          "0%": {
+            opacity: "1"
+          },
+          "40%": {
+            opacity: "1"
+          },
+          "45%": {
+            opacity: "0"
+          },
+          "100%": {
+            opacity: "0"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -98,6 +163,11 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "ekg-exit": "ekg-exit 0.6s ease-in forwards",
         "content-reveal": "content-reveal 0.8s ease-out forwards",
+        "pulse-logo": "pulse-logo 2s ease-in-out infinite",
+        "ekg-draw": "ekg-draw 2s linear infinite",
+        "ekg-sweep": "ekg-sweep 2s linear infinite",
+        "draw-mask": "draw-mask 2s linear infinite",
+        "line-wipe": "line-wipe 0.8s ease-in-out 2s forwards",
       },
     },
   },
