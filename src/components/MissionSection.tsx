@@ -13,7 +13,7 @@ const MissionSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -38,10 +38,10 @@ const MissionSection = () => {
         </div>
 
         {/* Three Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-stretch">
           {/* Left Column */}
-          <div className={`bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
-            isVisible ? 'animate-slide-out-left' : 'lg:opacity-0 lg:translate-x-[50%]'
+          <div className={`bg-cream/30 rounded-2xl p-6 sm:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
+            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-left' : 'md:opacity-0 md:translate-x-[50%]'
           }`}>
             <Users 
               className="w-10 h-10 mb-4 text-forest/70" 
@@ -59,7 +59,7 @@ const MissionSection = () => {
           </div>
 
           {/* Middle Column - Emphasized */}
-          <div className="bg-forest rounded-2xl p-8 lg:p-12 shadow-xl transform lg:scale-105 lg:-my-4 z-10 relative">
+          <div className="bg-forest rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl transform md:scale-105 md:-my-4 z-10 relative order-first md:order-none">
             <div className="h-1 w-16 bg-mint rounded-full mb-6" />
             <p className="text-white text-lg lg:text-xl leading-relaxed font-medium">
               Pulse Pathway is committed to supporting pre-medical students by
@@ -75,8 +75,8 @@ const MissionSection = () => {
           </div>
 
           {/* Right Column */}
-          <div className={`bg-cream/30 rounded-2xl p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
-            isVisible ? 'animate-slide-out-right' : 'lg:opacity-0 lg:-translate-x-[50%]'
+          <div className={`bg-cream/30 rounded-2xl p-6 sm:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
+            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-right' : 'md:opacity-0 md:-translate-x-[50%]'
           }`}>
             <img src={starBadge} alt="Star badge" className="w-10 h-10 mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
             <div className="h-1 w-12 bg-mint/60 rounded-full mb-6" />
