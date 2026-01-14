@@ -9,12 +9,12 @@ const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time of 2 seconds
+    // Simulate loading time of 1.2 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
       // Wait for fade-out animation to complete
-      setTimeout(onLoadingComplete, 500);
-    }, 2000);
+      setTimeout(onLoadingComplete, 300);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
