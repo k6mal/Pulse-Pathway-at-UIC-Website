@@ -1,6 +1,7 @@
 import { Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import starBadge from "@/assets/star-badge.png";
+import pulseIcon from "@/assets/pulse-icon.png";
 
 const MissionSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,7 +61,13 @@ const MissionSection = () => {
 
           {/* Middle Column - Emphasized */}
           <div className="bg-forest rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl transform md:scale-105 md:-my-4 z-10 relative order-first md:order-none">
-            <div className="h-1 w-16 bg-mint rounded-full mb-6" />
+            <div className="flex justify-center mb-6">
+              <img 
+                src={pulseIcon} 
+                alt="Pulse icon" 
+                className="w-16 h-auto brightness-0 invert"
+              />
+            </div>
             <p className="text-white text-lg lg:text-xl leading-relaxed font-medium">
               Pulse Pathway is committed to supporting pre-medical students by
               providing structured, one-on-one mentorship with graduate and
