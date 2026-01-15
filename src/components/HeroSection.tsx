@@ -9,7 +9,6 @@ const HeroSection = () => {
   const displayRoles = [...roles, ...roles];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-  const [heroOpacity, setHeroOpacity] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,12 +22,6 @@ const HeroSection = () => {
       const scrollY = window.scrollY;
       const threshold = window.innerHeight * 0.3;
       setShowScrollIndicator(scrollY < threshold);
-      
-      // Fade out hero section as user scrolls
-      const fadeStart = window.innerHeight * 0.1;
-      const fadeEnd = window.innerHeight * 0.5;
-      const opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
-      setHeroOpacity(Math.max(0, Math.min(1, opacity)));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,10 +29,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section 
-      className="h-screen flex items-center justify-center bg-background px-6 relative transition-opacity duration-300"
-      style={{ opacity: heroOpacity, pointerEvents: heroOpacity < 0.1 ? 'none' : 'auto' }}
-    >
+    <section className="h-screen flex items-center justify-center bg-background px-6 relative">
       {/* Logo - pinned 5px from top */}
       <img
         src={logo}
