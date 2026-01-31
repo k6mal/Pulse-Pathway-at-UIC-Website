@@ -52,7 +52,7 @@ const MissionSection = () => {
             <p className="text-forest/80 text-base lg:text-lg leading-relaxed">
               Our mission is to create clear, accessible pathways into medicine
               by connecting students with mentors who have firsthand experience
-              navigating medical school preparation, applications, and training.
+              navigating graduate school preparation, applications, and training.
               Through these individualized relationships, mentees gain guidance
               on academics, clinical involvement, research, and professional
               growth.
@@ -69,16 +69,10 @@ const MissionSection = () => {
               />
             </div>
             <p className="text-white text-lg lg:text-xl leading-relaxed font-medium">
-              Pulse Pathway is committed to supporting pre-medical students by
+              Pulse Pathway is committed to supporting pre-health students by
               providing structured, one-on-one mentorship with graduate and
               medical students.
             </p>
-            <div className="mt-8 flex items-center gap-3">
-              <div className="w-2 h-2 bg-mint rounded-full" />
-              <span className="text-cream/70 text-sm font-medium tracking-wide uppercase">
-                Core Mission
-              </span>
-            </div>
           </div>
 
           {/* Right Column */}
