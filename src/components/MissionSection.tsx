@@ -44,11 +44,13 @@ const MissionSection = () => {
           <div className={`bg-cream/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-all duration-500 ${
             isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-left' : 'opacity-100 md:opacity-0 md:translate-x-[50%]'
           }`}>
-            <Users 
-              className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4 text-forest/70" 
-              strokeWidth={1.5}
-            />
-            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6" />
+            <div className="flex justify-center">
+              <Users 
+                className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4 text-forest/70" 
+                strokeWidth={1.5}
+              />
+            </div>
+            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
             <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
               Our mission is to create clear, accessible pathways into medicine
               by connecting students with mentors who have firsthand experience
@@ -79,8 +81,10 @@ const MissionSection = () => {
           <div className={`bg-cream/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-all duration-500 ${
             isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-right' : 'opacity-100 md:opacity-0 md:-translate-x-[50%]'
           }`}>
-            <img src={starBadge} alt="Star badge" className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
-            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6" />
+            <div className="flex justify-center">
+              <img src={starBadge} alt="Star badge" className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
+            </div>
+            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
             <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
               By leveraging our close proximity to the Rush campus, we aim to
               enhance access to mentorship, clinical insight, and professional
