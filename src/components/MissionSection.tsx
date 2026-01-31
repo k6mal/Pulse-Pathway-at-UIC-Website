@@ -51,7 +51,7 @@ const MissionSection = () => {
               />
             </div>
             <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
-            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
+            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed text-center">
               Our mission is to create clear, accessible pathways into medicine
               by connecting students with mentors who have firsthand experience
               navigating graduate school preparation, applications, and training.
@@ -70,7 +70,7 @@ const MissionSection = () => {
                 className="w-12 sm:w-14 md:w-16 h-auto brightness-0 invert"
               />
             </div>
-            <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed font-medium">
+            <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed font-medium text-center">
               Pulse Pathway is committed to supporting pre-health students by
               providing structured, one-on-one mentorship with graduate and
               medical students.
@@ -85,7 +85,7 @@ const MissionSection = () => {
               <img src={starBadge} alt="Star badge" className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
             </div>
             <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
-            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
+            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed text-center">
               By leveraging our close proximity to the Rush campus, we aim to
               enhance access to mentorship, clinical insight, and professional
               development, maximizing opportunities and benefits for our
