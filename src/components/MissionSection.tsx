@@ -27,29 +27,29 @@ const MissionSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="min-h-screen py-24 px-6 md:px-12 lg:px-20 flex items-center bg-background"
+      className="min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 flex items-center bg-background"
     >
       <div className="max-w-7xl mx-auto w-full">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-forest tracking-tight">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-forest tracking-tight">
             Our Mission
           </h2>
-          <div className="w-24 h-1 bg-mint mx-auto mt-6 rounded-full" />
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-mint mx-auto mt-4 sm:mt-6 rounded-full" />
         </div>
 
         {/* Three Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-4 lg:gap-6 items-stretch">
           {/* Left Column */}
-          <div className={`bg-cream/30 rounded-2xl p-6 sm:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
-            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-left' : 'md:opacity-0 md:translate-x-[50%]'
+          <div className={`bg-cream/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-all duration-500 ${
+            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-left' : 'opacity-100 md:opacity-0 md:translate-x-[50%]'
           }`}>
             <Users 
-              className="w-10 h-10 mb-4 text-forest/70" 
+              className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4 text-forest/70" 
               strokeWidth={1.5}
             />
-            <div className="h-1 w-12 bg-mint/60 rounded-full mb-6" />
-            <p className="text-forest/80 text-base lg:text-lg leading-relaxed">
+            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6" />
+            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
               Our mission is to create clear, accessible pathways into medicine
               by connecting students with mentors who have firsthand experience
               navigating graduate school preparation, applications, and training.
@@ -60,15 +60,15 @@ const MissionSection = () => {
           </div>
 
           {/* Middle Column - Emphasized */}
-          <div className="bg-forest rounded-2xl p-6 sm:p-8 lg:p-12 shadow-xl transform md:scale-105 md:-my-4 z-10 relative order-first md:order-none">
-            <div className="flex justify-center mb-6">
+          <div className="bg-forest rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-12 shadow-lg md:shadow-xl transform md:scale-105 md:-my-4 z-10 relative order-first md:order-none">
+            <div className="flex justify-center mb-4 sm:mb-6">
               <img 
                 src={pulseIcon} 
                 alt="Pulse icon" 
-                className="w-16 h-auto brightness-0 invert"
+                className="w-12 sm:w-14 md:w-16 h-auto brightness-0 invert"
               />
             </div>
-            <p className="text-white text-lg lg:text-xl leading-relaxed font-medium">
+            <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed font-medium">
               Pulse Pathway is committed to supporting pre-health students by
               providing structured, one-on-one mentorship with graduate and
               medical students.
@@ -76,12 +76,12 @@ const MissionSection = () => {
           </div>
 
           {/* Right Column */}
-          <div className={`bg-cream/30 rounded-2xl p-6 sm:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-colors duration-300 ${
-            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-right' : 'md:opacity-0 md:-translate-x-[50%]'
+          <div className={`bg-cream/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 border border-forest/5 hover:border-forest/10 transition-all duration-500 ${
+            isVisible ? 'opacity-100 translate-x-0 md:animate-slide-out-right' : 'opacity-100 md:opacity-0 md:-translate-x-[50%]'
           }`}>
-            <img src={starBadge} alt="Star badge" className="w-10 h-10 mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
-            <div className="h-1 w-12 bg-mint/60 rounded-full mb-6" />
-            <p className="text-forest/80 text-base lg:text-lg leading-relaxed">
+            <img src={starBadge} alt="Star badge" className="w-8 h-8 sm:w-10 sm:h-10 mb-3 sm:mb-4" style={{ filter: 'brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(746%) hue-rotate(94deg) brightness(95%) contrast(89%)' }} />
+            <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6" />
+            <p className="text-forest/80 text-sm sm:text-base lg:text-lg leading-relaxed">
               By leveraging our close proximity to the Rush campus, we aim to
               enhance access to mentorship, clinical insight, and professional
               development, maximizing opportunities and benefits for our
