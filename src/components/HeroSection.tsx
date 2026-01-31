@@ -34,13 +34,13 @@ const HeroSection = () => {
       <img
         src={logo}
         alt="Pulse Pathway at UIC"
-        className="absolute top-2 sm:top-[5px] left-1/2 -translate-x-1/2 h-32 sm:h-48 md:h-64 lg:h-[18.75rem] z-0 opacity-80 md:opacity-100"
+        className="absolute top-8 sm:top-[5px] left-1/2 -translate-x-1/2 h-40 sm:h-48 md:h-64 lg:h-[18.75rem] z-0 opacity-80 md:opacity-100"
       />
 
       {/* Centered content */}
       <div className="text-center max-w-5xl mx-auto relative z-10 mt-16 sm:mt-20 md:mt-0">
         {/* Main Headline */}
-        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight px-2">
+        <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight px-2">
           <span className="text-foreground">direct long-term one on one mentorship with</span>
           <br />
           {/* Container needs overflow-hidden to "mask" the sliding text */}
