@@ -94,8 +94,8 @@ const HeroSection = () => {
           <Button variant="default" size="lg" className="w-full sm:w-auto" asChild>
             <a href="https://linktr.ee/pulseatuic" target="_blank" rel="noopener noreferrer">Join Now</a>
           </Button>
-          <Button variant="secondary" size="lg" className="w-full sm:w-auto">
-            Our Instagram
+          <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
+            <a href="https://www.instagram.com/pulsepathwaysatuic" target="_blank" rel="noopener noreferrer">Our Instagram</a>
           </Button>
         </div>
       </div>
