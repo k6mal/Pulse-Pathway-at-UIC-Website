@@ -91,8 +91,8 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          <Button variant="default" size="lg" className="w-full sm:w-auto">
-            Join Now
+          <Button variant="default" size="lg" className="w-full sm:w-auto" asChild>
+            <a href="https://linktr.ee/pulseatuic" target="_blank" rel="noopener noreferrer">Join Now</a>
           </Button>
           <Button variant="secondary" size="lg" className="w-full sm:w-auto">
             Our Instagram
