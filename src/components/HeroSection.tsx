@@ -40,7 +40,14 @@ const HeroSection = () => {
       {/* Centered content */}
       <div className="text-center max-w-5xl mx-auto relative z-10 mt-16 sm:mt-20 md:mt-0">
         {/* Main Headline */}
-        <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight px-2">
+        <h1 
+          className="font-bold tracking-tight px-2"
+          style={{ 
+            fontSize: 'clamp(1.5rem, 4vw + 0.5rem, 4.5rem)',
+            lineHeight: '1.15',
+            letterSpacing: '-0.02em'
+          }}
+        >
           <span className="text-foreground">direct long-term one on one mentorship with</span>
           <br />
           {/* Container needs overflow-hidden to "mask" the sliding text */}
@@ -71,7 +78,14 @@ const HeroSection = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="mt-6 sm:mt-8 text-lg sm:text-xl md:text-2xl font-display text-muted-foreground">
+        <p 
+          className="font-display text-muted-foreground"
+          style={{ 
+            fontSize: 'clamp(1rem, 2vw + 0.25rem, 1.5rem)',
+            marginTop: 'clamp(1.5rem, 3vw, 2.5rem)',
+            letterSpacing: '0.01em'
+          }}
+        >
           Mentorship. Matters.
         </p>
 
