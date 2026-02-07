@@ -72,12 +72,9 @@ const MissionSection = () => {
                 letterSpacing: '0.01em'
               }}
             >
-              Our mission is to create clear, accessible pathways into medicine
-              by connecting students with mentors who have firsthand experience
-              navigating graduate school preparation, applications, and training.
-              Through these individualized relationships, mentees gain guidance
-              on academics, clinical involvement, research, and professional
-              growth.
+              Pulse Pathway is committed to educating and developing the next
+              generation of physician-leaders who place service, integrity, and
+              community impact at the forefront of their careers.
             </p>
           </div>
 
@@ -98,9 +95,9 @@ const MissionSection = () => {
                 letterSpacing: '0.01em'
               }}
             >
-              Pulse Pathway is committed to supporting pre-health students by
-              providing structured, one-on-one mentorship with graduate and
-              medical students.
+              Pulse Pathway creates clear, accessible pathways into medicine
+              by connecting students with mentors who have firsthand experience
+              navigating graduate school preparation, applications, and training.
             </p>
           </div>
 
@@ -120,14 +117,10 @@ const MissionSection = () => {
                 letterSpacing: '0.01em'
               }}
             >
-              By leveraging our close proximity to the Rush campus, we aim to
-              enhance access to mentorship, clinical insight, and professional
-              development, maximizing opportunities and benefits for our
-              members. Pulse Pathway emphasizes community, mentorship, and
-              continuity, fostering meaningful, long-term mentor–mentee
-              connections that equip aspiring physicians with the insight,
-              support, and confidence needed to progress through each stage of
-              their medical journey.
+              By leveraging our close connection to the Rush campus, Pulse
+              Pathway expands access to medical trainees, clinical insight, and
+              professional development opportunities that students might not
+              otherwise encounter.
             </p>
           </div>
         </div>
