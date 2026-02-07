@@ -69,8 +69,7 @@ const MissionSection = () => {
               style={{ 
                 fontSize: 'clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem)',
                 lineHeight: '1.7',
-                letterSpacing: '0.01em',
-                fontFamily: 'Helvetica, Arial, sans-serif'
+                letterSpacing: '0.01em'
               }}
             >
               Our mission is to create clear, accessible pathways into medicine
@@ -96,8 +95,7 @@ const MissionSection = () => {
               style={{ 
                 fontSize: 'clamp(1rem, 1.75vw + 0.25rem, 1.25rem)',
                 lineHeight: '1.7',
-                letterSpacing: '0.01em',
-                fontFamily: 'Helvetica, Arial, sans-serif'
+                letterSpacing: '0.01em'
               }}
             >
               Pulse Pathway is committed to supporting pre-health students by
@@ -119,8 +117,7 @@ const MissionSection = () => {
               style={{ 
                 fontSize: 'clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem)',
                 lineHeight: '1.7',
-                letterSpacing: '0.01em',
-                fontFamily: 'Helvetica, Arial, sans-serif'
+                letterSpacing: '0.01em'
               }}
             >
               By leveraging our close proximity to the Rush campus, we aim to
