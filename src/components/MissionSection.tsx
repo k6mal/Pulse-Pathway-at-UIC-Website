@@ -65,7 +65,7 @@ const MissionSection = () => {
             </div>
             <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
             <p 
-              className="text-forest/80 text-center"
+              className="text-forest/80 text-center font-bold"
               style={{ 
                 fontSize: 'clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem)',
                 lineHeight: '1.7',
@@ -92,7 +92,7 @@ const MissionSection = () => {
               />
             </div>
             <p 
-              className="text-white font-medium text-center"
+              className="text-white font-bold text-center"
               style={{ 
                 fontSize: 'clamp(1rem, 1.75vw + 0.25rem, 1.25rem)',
                 lineHeight: '1.7',
@@ -115,7 +115,7 @@ const MissionSection = () => {
             </div>
             <div className="h-1 w-10 sm:w-12 bg-mint/60 rounded-full mb-4 sm:mb-6 mx-auto" />
             <p 
-              className="text-forest/80 text-center"
+              className="text-forest/80 text-center font-bold"
               style={{ 
                 fontSize: 'clamp(0.875rem, 1.5vw + 0.25rem, 1.125rem)',
                 lineHeight: '1.7',
