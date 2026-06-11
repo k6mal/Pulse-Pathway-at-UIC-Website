@@ -1,6 +1,4 @@
-import { useRef } from "react";
 import { motion } from "framer-motion";
-import { useSnapPoints } from "@/components/SmoothScroll";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
@@ -23,12 +21,9 @@ const steps = [
 ];
 
 const HowItWorksSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  useSnapPoints(sectionRef);
-
   return (
-    <section ref={sectionRef} id="how-it-works" className="px-5 py-24 sm:px-8 md:py-28">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:gap-8">
+    <section id="how-it-works" className="flex min-h-screen items-center px-5 py-24 sm:px-8 md:py-28">
+      <div className="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-2 lg:gap-8">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <motion.div
             initial={{ opacity: 0, y: 28 }}

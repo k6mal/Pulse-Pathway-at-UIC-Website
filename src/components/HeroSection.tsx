@@ -1,16 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useSnapPoints } from "@/components/SmoothScroll";
 
 const roles = ["medical students", "PA students"];
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const HeroSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
-
-  useSnapPoints(sectionRef);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,10 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative flex min-h-screen items-center justify-center px-5 pt-16 pb-36 sm:px-8"
-    >
+    <section className="relative flex min-h-screen items-center justify-center px-5 pt-16 pb-36 sm:px-8">
       <div className="mx-auto max-w-5xl text-center">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
