@@ -4,39 +4,40 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --background: 40 30% 99%;
+    --foreground: 0 0% 9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 40 30% 99%;
+    --card-foreground: 0 0% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 40 30% 99%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 40 12% 94%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 40 12% 94%;
+    --muted-foreground: 30 4% 44%;
 
-    --accent: 220 14% 96%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 40 12% 94%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 142 76% 15%;
+    --border: 40 8% 89%;
+    --input: 40 8% 89%;
+    --ring: 150 95% 21%;
 
     --radius: 9999px;
 
     /* Custom colors */
     --forest: 150 95% 21%;
-    --nav-link: 220 9% 46%;
+    --forest-deep: 152 45% 15%;
+    --nav-link: 30 4% 44%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -78,6 +79,7 @@
     --ring: 142 76% 36%;
 
     --forest: 150 95% 21%;
+    --forest-deep: 152 45% 15%;
     --nav-link: 220 9% 60%;
 
     --sidebar-background: 240 5.9% 10%;
@@ -97,7 +99,6 @@
   }
 
   html {
-    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -105,38 +106,26 @@
     @apply bg-background text-foreground font-sans antialiased;
     overflow-x: hidden;
   }
-}
 
-@layer utilities {
-  .animate-delay-100 {
-    animation-delay: 100ms;
-  }
-  .animate-delay-200 {
-    animation-delay: 200ms;
-  }
-  .animate-delay-300 {
-    animation-delay: 300ms;
+  ::selection {
+    background: hsl(var(--forest) / 0.15);
   }
 }
 
-@keyframes text-slide {
-  0%, 20% {
-    transform: translateY(0);
-  }
-  25%, 45% {
-    transform: translateY(-100%);
-  }
-  50%, 70% {
-    transform: translateY(-200%);
-  }
-  75%, 95% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+/* Lenis smooth scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
 }
 
-.animate-text-slide {
-  animation: text-slide 8s ease-in-out infinite;
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
