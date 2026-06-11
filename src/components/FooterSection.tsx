@@ -1,15 +1,10 @@
-import { useRef } from "react";
 import { motion } from "framer-motion";
-import { useSnapPoints } from "@/components/SmoothScroll";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const FooterSection = () => {
-  const footerRef = useRef<HTMLElement>(null);
-  useSnapPoints(footerRef);
-
   return (
-    <footer ref={footerRef} id="connect" className="relative overflow-hidden pt-28 md:pt-36">
+    <footer id="connect" className="relative overflow-hidden pt-28 md:pt-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col justify-between gap-12 md:flex-row">
           <motion.h2

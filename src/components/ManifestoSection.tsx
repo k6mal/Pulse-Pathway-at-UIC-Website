@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
-import { useSnapPoints, useFreeZone } from "@/components/SmoothScroll";
 
 /**
  * Goldsand-style scroll-unlock text: the section pins while the manifesto
@@ -51,12 +50,6 @@ const ManifestoSection = () => {
     target: containerRef,
     offset: ["start start", "end end"],
   });
-
-  // Checkpoint at the section's entry edge so a gesture lands the reader at the
-  // start of the reveal; the section itself is a free-scroll zone, so the words
-  // unlock as the reader scrolls through at their own pace rather than snapping.
-  useSnapPoints(containerRef, [0]);
-  useFreeZone(containerRef);
 
   const total = manifesto.length;
   // Each word unlocks across an overlapping slice of scroll progress,

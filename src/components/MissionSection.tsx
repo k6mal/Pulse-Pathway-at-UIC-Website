@@ -1,7 +1,5 @@
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import { Users, Route, Stethoscope } from "lucide-react";
-import { useSnapPoints } from "@/components/SmoothScroll";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
@@ -24,12 +22,9 @@ const pillars = [
 ];
 
 const MissionSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  useSnapPoints(sectionRef);
-
   return (
-    <section ref={sectionRef} id="mission" className="px-5 py-24 sm:px-8 md:py-28">
-      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2 lg:gap-8">
+    <section id="mission" className="flex min-h-screen items-center px-5 py-24 sm:px-8 md:py-28">
+      <div className="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-2 lg:gap-8">
         {/* Sticky heading column */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <motion.div
