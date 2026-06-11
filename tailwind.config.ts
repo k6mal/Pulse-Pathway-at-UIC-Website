@@ -14,8 +14,28 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Futura", "Jost", "Century Gothic", "sans-serif"],
+        // Apple system stack: renders SF Pro on Apple devices, native UI
+        // fonts elsewhere. No webfont download.
+        sans: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        display: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -25,6 +45,7 @@ export default {
         foreground: "hsl(var(--foreground))",
         forest: {
           DEFAULT: "hsl(var(--forest))",
+          deep: "hsl(var(--forest-deep))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
